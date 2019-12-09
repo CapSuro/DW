@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{1BEFF84D-5194-4BCD-8308-21F3F20F091D}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{9D6D501F-8B69-47AE-9FA5-E03A0B248CA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -9218,9 +9218,7 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9542,6 +9540,14 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="166,42"
+          Id="Package\DF DimCustomer\OLE DB Command"
+          TopLeft="229,311.5" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\DF DimCustomer\Slowly Changing Dimension"
+          TopLeft="207.5,209.5" />
+        <NodeLayout
           Size="150,42"
           Id="Package\DF DimCustomer\OLE DB Source"
           TopLeft="237,5.5" />
@@ -9549,6 +9555,10 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
           Size="113,42"
           Id="Package\DF DimCustomer\Lookup"
           TopLeft="255.5,107.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF DimCustomer\Insert Destination"
+          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimCustomer.Paths[OLE DB Source Output]"
           TopLeft="312,47.5">
@@ -9571,38 +9581,6 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="209,42"
-          Id="Package\DF DimCustomer\Slowly Changing Dimension"
-          TopLeft="207.5,209.5" />
-        <EdgeLayout
-          Id="Package\DF DimCustomer.Paths[Lookup No Match Output]"
-          TopLeft="312,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF DimCustomer\Insert Destination"
-          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimCustomer.Paths[New Output]"
           TopLeft="278.5,251.5">
@@ -9639,10 +9617,30 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DF DimCustomer\OLE DB Command"
-          TopLeft="229,311.5" />
+        <EdgeLayout
+          Id="Package\DF DimCustomer.Paths[Lookup No Match Output]"
+          TopLeft="312,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF DimCustomer.Paths[Changing Attribute Updates Output]"
           TopLeft="345.5,251.5">
@@ -9797,67 +9795,25 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\DF DimEmployee\OLE DB Source"
-          TopLeft="237,5.5" />
+          Size="166,42"
+          Id="Package\DF DimEmployee\OLE DB Command"
+          TopLeft="229,311.5" />
         <NodeLayout
           Size="113,42"
           Id="Package\DF DimEmployee\Lookup"
           TopLeft="255.5,107.5" />
-        <EdgeLayout
-          Id="Package\DF DimEmployee.Paths[OLE DB Source Output]"
-          TopLeft="312,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="209,42"
           Id="Package\DF DimEmployee\Slowly Changing Dimension"
           TopLeft="207.5,209.5" />
-        <EdgeLayout
-          Id="Package\DF DimEmployee.Paths[Lookup No Match Output]"
-          TopLeft="312,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="163,42"
           Id="Package\DF DimEmployee\Insert Destination"
           TopLeft="5.50000000000006,311.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DF DimEmployee\OLE DB Source"
+          TopLeft="237,5.5" />
         <EdgeLayout
           Id="Package\DF DimEmployee.Paths[New Output]"
           TopLeft="278.5,251.5">
@@ -9894,10 +9850,30 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DF DimEmployee\OLE DB Command"
-          TopLeft="229,311.5" />
+        <EdgeLayout
+          Id="Package\DF DimEmployee.Paths[Lookup No Match Output]"
+          TopLeft="312,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF DimEmployee.Paths[Changing Attribute Updates Output]"
           TopLeft="345.5,251.5">
@@ -9931,6 +9907,30 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-95.28390625,29.2735042735043,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF DimEmployee.Paths[OLE DB Source Output]"
+          TopLeft="312,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10028,13 +10028,25 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\DF DimGenre\OLE DB Source"
-          TopLeft="237,5.5" />
+          Size="209,42"
+          Id="Package\DF DimGenre\Slowly Changing Dimension"
+          TopLeft="207.5,209.5" />
         <NodeLayout
           Size="113,42"
           Id="Package\DF DimGenre\Lookup"
           TopLeft="255.5,107.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DF DimGenre\OLE DB Command"
+          TopLeft="229,311.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DF DimGenre\OLE DB Source"
+          TopLeft="237,5.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF DimGenre\Insert Destination"
+          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimGenre.Paths[OLE DB Source Output]"
           TopLeft="312,47.5">
@@ -10057,38 +10069,6 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="209,42"
-          Id="Package\DF DimGenre\Slowly Changing Dimension"
-          TopLeft="207.5,209.5" />
-        <EdgeLayout
-          Id="Package\DF DimGenre.Paths[Lookup No Match Output]"
-          TopLeft="312,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF DimGenre\Insert Destination"
-          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimGenre.Paths[New Output]"
           TopLeft="278.5,251.5">
@@ -10125,10 +10105,30 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DF DimGenre\OLE DB Command"
-          TopLeft="229,311.5" />
+        <EdgeLayout
+          Id="Package\DF DimGenre.Paths[Lookup No Match Output]"
+          TopLeft="312,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF DimGenre.Paths[Changing Attribute Updates Output]"
           TopLeft="345.5,251.5">
@@ -10399,7 +10399,7 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10409,7 +10409,7 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10521,13 +10521,13 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\DF DimInvoiceLine\OLE DB Source"
-          TopLeft="237,5.5" />
-        <NodeLayout
           Size="113,42"
           Id="Package\DF DimInvoiceLine\Lookup"
           TopLeft="255.5,107.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DF DimInvoiceLine\OLE DB Source"
+          TopLeft="237,5.5" />
         <EdgeLayout
           Id="Package\DF DimInvoiceLine.Paths[OLE DB Source Output]"
           TopLeft="312,47.5">
@@ -10667,7 +10667,7 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10677,71 +10677,10 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF DimInvoiceLine\Slowly Changing Dimension">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{76989FE7-2B86-42F1-83EE-620D3C833975}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[DimInvoiceLine]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[InvoiceId]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;InvoiceId&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[InvoiceLineId]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;InvoiceLineID&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Quantity]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Quantity&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[TrackId]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;TrackId&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[UnitPrice]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;UnitPrice&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn /&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent /&gt;
-  &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
-  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -10764,13 +10703,25 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\DF DimMediaType\OLE DB Source"
-          TopLeft="237,5.5" />
+          Size="209,42"
+          Id="Package\DF DimMediaType\Slowly Changing Dimension"
+          TopLeft="207.5,209.5" />
         <NodeLayout
           Size="113,42"
           Id="Package\DF DimMediaType\Lookup"
           TopLeft="255.5,107.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DF DimMediaType\OLE DB Command"
+          TopLeft="229,311.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DF DimMediaType\OLE DB Source"
+          TopLeft="237,5.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF DimMediaType\Insert Destination"
+          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimMediaType.Paths[OLE DB Source Output]"
           TopLeft="312,47.5">
@@ -10790,41 +10741,11 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="209,42"
-          Id="Package\DF DimMediaType\Slowly Changing Dimension"
-          TopLeft="207.5,209.5" />
-        <EdgeLayout
-          Id="Package\DF DimMediaType.Paths[Lookup No Match Output]"
-          TopLeft="312,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF DimMediaType\Insert Destination"
-          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimMediaType.Paths[New Output]"
           TopLeft="278.5,251.5">
@@ -10861,10 +10782,30 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DF DimMediaType\OLE DB Command"
-          TopLeft="229,311.5" />
+        <EdgeLayout
+          Id="Package\DF DimMediaType.Paths[Lookup No Match Output]"
+          TopLeft="312,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF DimMediaType.Paths[Changing Attribute Updates Output]"
           TopLeft="345.5,251.5">
@@ -10993,6 +10934,18 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
           Id="Package\DF DimTrack\OLE DB Source"
           TopLeft="237,5.5" />
         <NodeLayout
+          Size="163,42"
+          Id="Package\DF DimTrack\Insert Destination"
+          TopLeft="5.50000000000006,311.5" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\DF DimTrack\Slowly Changing Dimension"
+          TopLeft="207.5,209.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DF DimTrack\OLE DB Command"
+          TopLeft="229,311.5" />
+        <NodeLayout
           Size="113,42"
           Id="Package\DF DimTrack\Lookup"
           TopLeft="255.5,107.5" />
@@ -11015,41 +10968,11 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="209,42"
-          Id="Package\DF DimTrack\Slowly Changing Dimension"
-          TopLeft="207.5,209.5" />
-        <EdgeLayout
-          Id="Package\DF DimTrack.Paths[Lookup No Match Output]"
-          TopLeft="312,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF DimTrack\Insert Destination"
-          TopLeft="5.50000000000006,311.5" />
         <EdgeLayout
           Id="Package\DF DimTrack.Paths[New Output]"
           TopLeft="278.5,251.5">
@@ -11086,10 +11009,30 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DF DimTrack\OLE DB Command"
-          TopLeft="229,311.5" />
+        <EdgeLayout
+          Id="Package\DF DimTrack.Paths[Lookup No Match Output]"
+          TopLeft="312,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF DimTrack.Paths[Changing Attribute Updates Output]"
           TopLeft="345.5,251.5">
@@ -11229,6 +11172,67 @@ where [refTable].[TrackID] = ? and [refTable].[Name] = ? and [refTable].[AlbumId
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF DimInvoiceLine\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{76989FE7-2B86-42F1-83EE-620D3C833975}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimInvoiceLine]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[InvoiceId]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;InvoiceId&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[InvoiceLineId]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;InvoiceLineID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Quantity]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Quantity&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[TrackId]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;TrackId&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[UnitPrice]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;UnitPrice&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
