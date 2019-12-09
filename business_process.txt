@@ -1,0 +1,3 @@
+inventory – the database keeps information on albums produced by artists. Albums have tracks, grouped by genre or media type. Playlists can also group several tracks together.
+billing – the store’s employees sell tracks to customers. Transactions are recorded in the invoice and invoice line tables.
+best seller - the manager wants to track sales by invoice, invoice line, track, album, to know which artists, which albums, which tracks are best seller.

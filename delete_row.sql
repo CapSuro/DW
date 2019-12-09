@@ -1,0 +1,10 @@
+Delete From ChinookDW.dbo.DimAlbum where AlbumID = -1;
+Delete From ChinookDW.dbo.DimArtist where ArtistID = -1;
+Delete From ChinookDW.dbo.DimDate where DateKey = -1;
+Delete From ChinookDW.dbo.DimCustomer where CustomerID = -1;
+Delete From ChinookDW.dbo.DimEmployee where EmployeeID = -1;
+Delete From ChinookDW.dbo.DimGenre where GenreID = -1;
+Delete From ChinookDW.dbo.DimInvoice where InvoiceID = -1;
+Delete From ChinookDW.dbo.DimInvoiceLine where InvoiceLineID = -1;
+Delete From ChinookDW.dbo.DimMediaType where MediaTypeID = -1;
+Delete From ChinookDW.dbo.DimTrack where TrackID = -1;
